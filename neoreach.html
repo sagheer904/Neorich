@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        #nav{
+            height: 15vh;
+            width: 100%;
+            
+        }
+        #logo{
+            height: 30%;
+            width: 15%;
+            margin-top: 5vh;
+            margin-left: 8%;
+        }
+        #nav_bar{
+           
+            width: 44%;
+           margin-top: -2%;
+            margin-left: 25%;
+            overflow: hidden;
+        }
+        #nav_bar li{
+            display: inline-block;
+            margin-left: 1%;
+            padding: 1px;
+        }
+        #li a{
+            text-decoration: none;
+            list-style: none;
+            color: rgb(49, 49, 49);
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #login{
+            height: 10%;
+            width: 20%;
+            right: 3%;
+            
+            position: absolute;
+            top: 2%;
+            
+
+        }
+        #loginli{
+            display: inline-block;
+            margin-left: 10%;
+            margin-top: 10%;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            
+        }
+        #loginli a{
+            list-style: none;
+            text-decoration: none;
+            color: rgb(49, 49, 49);
+
+        }
+        #navbtn{
+            height: 50%;
+            width: 60%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-left: 5%;
+            background-color: rgb(7, 185, 156);
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        #navbtn:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #unline{
+            height: 2vh;
+            width: 50%;
+           
+            transition: all 1s;
+            left:-50%;
+            top: 10%;
+            position: relative;
+
+
+        }
+        #unline1{
+            height: 2vh;
+            width: 50%;
+           
+            transition: all 1s;
+            left:-50%;
+            top: 10%;
+            position: relative;
+
+
+        }
+        #li:hover #unline1{
+            left: 0%;
+
+        }
+        #unline2{
+            height: 2vh;
+            width: 50%;
+           
+            transition: all 1s;
+            left:-50%;
+            top: 10%;
+            position: relative;
+
+
+        } 
+        #li:hover #unline2{
+            left: 0%;
+
+        }
+        #unline3{
+            height: 2vh;
+            width: 50%;
+           
+            transition: all 1s;
+            left:-50%;
+            top: 10%;
+            position: relative;
+
+
+        }
+        #li:hover #unline3{
+            left: 0%;
+
+        }
+         #unline4{
+            height: 2vh;
+            width: 50%;
+           
+            transition: all 1s;
+            left:-50%;
+            top: 10%;
+            position: relative;
+
+
+        }
+        #li:hover #unline4{
+            left: 0%;
+
+        }
+        #li:hover #unline{
+            left: 0%;
+
+        }
+        #li{
+           
+            width: 16.5%;
+            position: relative;
+            overflow: hidden;
+
+        }
+        @media screen and (max-width:1075px) {
+            #logo{
+                margin-top: 2vh;
+                margin-left: 40%;
+            }
+            
+        }
+        @media screen and (max-width:500px) {
+            #logo{
+                width: 50%;
+                height: 10vh;
+                margin-left: 15%;
+            }
+            
+        }
+        @media screen and (max-width:1075px) {
+            #nav_bar{
+                
+                width: 55%;
+                margin-top: 1vh;
+                margin-left: 5%;
+            }
+            
+        }
+        @media screen and (max-width:500px) {
+            #nav_bar{
+                
+               opacity: 0;
+            }
+            
+        }
+        #p1b{
+            height: 40vh;
+            width: 35%;
+            margin-top: 10vh;
+            margin-left: 5%;
+        }
+        #p1h{
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(48, 47, 47);
+
+        }
+        #p1p{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 5vh;
+            margin-left: 3%;
+            color: grey;
+
+        }
+        #p1btn{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 8vh;
+            width: 15%;
+            font-size: 20px;
+            margin-left: 5%;
+            margin-top: 2vh;
+            background-color: rgb(7, 185, 156);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #p1btn:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #p1{
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            
+        }
+        #slider{
+            width: 20%;
+            height: 30vh;
+            
+            position: absolute;
+            left: 60%;
+            top: -15vh;
+            overflow: hidden;
+            position: relative;
+           
+        }
+        #s1{
+            height: 20vh;
+            animation: s1 5s linear infinite;
+            position: absolute;
+
+        }
+        @keyframes s1{
+            0%{
+                margin-left: -300%
+
+            }
+            12.5%{
+                margin-left: -250%;
+            }
+            25%{
+                margin-left: -200%;
+            }
+            37.5%{
+                margin-left: -150%;
+            }
+            50%{
+                margin-left: -100%;
+            }
+            62.5%{
+                margin-left: -50%;
+            }
+            75%{
+                margin-left: 0%;
+
+            }
+            87.5%{
+                margin-left: 50%;
+
+            }
+            100%{
+                margin-left: 100%;
+
+            }
+            
+
+        }
+        #s2{
+            height: 20vh;
+            animation: s2 5s linear infinite;
+            position: absolute;
+        }
+        @keyframes s2{
+             0%{
+                margin-left: -250%
+
+            }
+            12.5%{
+                margin-left: -200%;
+            }
+            25%{
+                margin-left: -150%;
+            }
+            37.5%{
+                margin-left: -100%;
+            }
+            50%{
+                margin-left: -50%;
+            }
+            62.5%{
+                margin-left: 0%;
+            }
+            75%{
+                margin-left: 50%;
+
+            }
+            87.5%{
+                margin-left: 100%;
+
+            }
+            100%{
+                margin-left: 150%;
+                
+            }
+           
+            
+
+        }
+        #s3{
+            height: 20vh;
+            animation: s3 5s linear infinite;
+            position: absolute;
+        }
+        @keyframes s3{
+            0%{
+                margin-left: -200%
+
+            }
+            12.5%{
+                margin-left: -150%;
+            }
+            25%{
+                margin-left: -100%;
+            }
+            37.5%{
+                margin-left: -50%;
+            }
+            50%{
+                margin-left: 0%;
+            }
+            62.5%{
+                margin-left: 50%;
+            }
+            75%{
+                margin-left: 100%;
+
+            }
+            87.5%{
+                margin-left: 150%;
+
+            }
+            100%{
+                margin-left: 200%;
+                
+            }
+           
+            
+
+        }
+        #s4{
+            height: 20vh;
+            animation: s4 5s linear infinite;
+            position: absolute;
+            
+        }
+        @keyframes s4{
+            0%{
+                margin-left: -150%
+
+            }
+            12.5%{
+                margin-left: -100%;
+            }
+            25%{
+                margin-left: -50%;
+            }
+            37.5%{
+                margin-left: 0%;
+            }
+            50%{
+                margin-left: 50%;
+            }
+            62.5%{
+                margin-left: 100%;
+            }
+            75%{
+                margin-left: 150%;
+
+
+            }
+            87.5%{
+                margin-left: 200%;
+
+
+            }
+            100%{
+                margin-left: 250%;
+
+                
+            }
+           
+            
+
+        }
+        
+        #p1img{
+            position: absolute;
+            height: 70vh;
+            margin-top: -80vh;
+            margin-left: 45%;
+        }
+        #p1img1{
+            position: absolute;
+            height: 70vh;
+            margin-top: -80vh;
+            margin-left: 75%;
+           
+        }
+      
+        #wave{
+            
+            height: 10vh;
+            width: 18%;
+            position:relative;
+            margin-top: -40vh;
+            margin-left: 79%;
+            overflow: hidden;
+        }
+        #p1img2{
+            position: absolute;
+            height: 8vh;
+            width: 100%;
+            animation: wave 5s linear infinite;
+           
+            
+
+
+        }
+        @keyframes wave{
+        0%{
+                margin-left: -100%
+
+            }
+            /* 20%{
+                margin-left: 0%;
+            }
+            40%{
+                margin-left: 0%;
+            }
+            60%{
+                margin-left: 50%;
+            }
+            80%{
+                margin-left:100%;
+            } */
+            100%{
+                margin-left: 100%;
+            }
+        }
+        #p1img3{
+            position: absolute;
+            height: 8vh;
+            width: 100%;
+            animation: wave1 5s linear infinite;
+           
+            
+
+
+        }
+        @keyframes wave1{
+            
+            0%{
+                margin-left: 0%
+
+            }
+            /* 25%{
+                margin-left: 30%;
+            }
+            50%{
+                margin-left: 90%;
+            }
+            75%{
+                margin-left: 130%;
+            } */
+            100%{
+                margin-left: 200%;
+            }
+           
+            
+
+        }
+        #p1img4{
+            position: absolute;
+            height: 8vh;
+            width: 100%;
+            animation: wave2 5s linear infinite;
+           
+            
+
+
+        }
+        @keyframes wave2{
+            
+            0%{
+                margin-left: -200%
+
+            }
+            /* 25%{
+                margin-left: 30%;
+            }
+            50%{
+                margin-left: 90%;
+            }
+            75%{
+                margin-left: 130%;
+            } */
+            100%{
+                margin-left: 0%;
+            }
+           
+            
+
+        }
+        #graph{
+            height: 10vh;
+            width: 6.5%;
+            
+             left: 79.5%;
+            top: -35vh;
+            position: relative;
+            overflow: hidden;
+            animation: graph 3s infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes graph {
+           from{
+               width: 0%;
+           }
+           to{
+               width:6.5%
+           }
+        }
+           
+        
+
+
+        #p1img5{
+            height: 10vh;
+            width:83px;
+            
+            
+        }
+        #dot{
+            height: 9px;
+            width: 9px;
+            border: 1px solid;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 42vh;
+            left: 84.5%;
+            border-radius: 50%;
+            animation: dot 3.1s infinite;
+            
+        }
+        @keyframes dot{
+    0%{
+        opacity:  0;
+    }
+    16%{
+        opacity:0 ;
+    }
+    32%{
+        opacity: 0;
+
+    }
+    48%{
+        opacity: 0;
+    }
+
+    64%{
+        opacity: 0;
+
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+    
+
+       #s5{
+            height: 20vh;
+            animation: s5 5s linear infinite;
+            position: absolute;
+
+        }
+        @keyframes s5{
+            0%{
+                margin-left: -100%
+
+            }
+            12.5%{
+                margin-left: -50%;
+            }
+            25%{
+                margin-left: 0%;
+            }
+            37.5%{
+                margin-left: 50%;
+            }
+            50%{
+                margin-left: 100%;
+            }
+            62.5%{
+                margin-left: 150%;
+            }
+            75%{
+                margin-left: 200%;
+
+
+            }
+            87.5%{
+                margin-left: 250%;
+
+
+            }
+            100%{
+                margin-left: 300%;
+
+                
+            }
+           
+            
+
+        }
+        #s6{
+            height: 20vh;
+            animation: s6 5s linear infinite;
+            position: absolute;
+        }
+        @keyframes s6{
+            0%{
+                margin-left: -50%
+
+            }
+            12.5%{
+                margin-left: 0%;
+            }
+            25%{
+                margin-left: 50%;
+            }
+            37.5%{
+                margin-left: 100%;
+            }
+            50%{
+                margin-left: 150%;
+            }
+            62.5%{
+                margin-left: 200%;
+            }
+            75%{
+                margin-left: 250%;
+
+
+            }
+            87.5%{
+                margin-left: 300%;
+
+
+            }
+            100%{
+                margin-left: 350%;
+
+                
+            }
+        }
+           
+            
+
+         
+        #s7{
+            height: 20vh;
+            animation: s7 5s linear infinite;
+            position: absolute;
+            
+        }
+        @keyframes s7{
+            0%{
+                margin-left: 0%
+
+            }
+            12.5%{
+                margin-left: 50%;
+            }
+            25%{
+                margin-left: 100%;
+            }
+            37.5%{
+                margin-left: 150%;
+            }
+            50%{
+                margin-left: 200%;
+            }
+            62.5%{
+                margin-left: 250%;
+            }
+            75%{
+                margin-left: 300%;
+
+
+            }
+            87.5%{
+                margin-left: 350%;
+
+
+            }
+            100%{
+                margin-left: 400%;
+
+                
+            }
+        }
+           
+            
+
+        
+
+        #s8{
+            height: 20vh;
+            animation: s8 5s linear infinite;
+            position: absolute;
+            
+            
+        }
+        @keyframes s8{
+            0%{
+                margin-left: 50%
+
+            }
+            12.5%{
+                margin-left: 100%;
+            }
+            25%{
+                margin-left: 150%;
+            }
+            37.5%{
+                margin-left: 200%;
+            }
+            50%{
+                margin-left: 250%;
+            }
+            62.5%{
+                margin-left: 300%;
+            }
+            75%{
+                margin-left: 350%;
+
+
+            }
+            87.5%{
+                margin-left: 400%;
+
+
+            }
+            100%{
+                margin-left: 450%;
+
+                
+            }
+           
+            
+
+        }
+        #s9{
+            height: 20vh;
+            animation: s9 5s linear infinite;
+            position: absolute; 
+        }
+        @keyframes s9{
+            0%{
+                margin-left: -350%
+
+            }
+            12.5%{
+                margin-left: -300%;
+            }
+            25%{
+                margin-left: -250%;
+            }
+            37.5%{
+                margin-left: -200%;
+            }
+            50%{
+                margin-left: -150%;
+            }
+            62.5%{
+                margin-left: -100%;
+            }
+            75%{
+                margin-left: -50%;
+
+
+            }
+            87.5%{
+                margin-left: 0%;
+
+
+            }
+            100%{
+                margin-left: 50%;
+
+                
+            }
+           
+            
+
+        }
+        #up{
+            left: 65%;
+            position: absolute;
+            width: 15%;
+            top: 30vh;
+            animation: up 2s  infinite ease-out;
+        }
+        @keyframes up{
+            0%{
+                margin-top: 0;
+            }
+            50%{
+                margin-top: -10px;
+            }
+            100%
+            {
+                margin-top: 0px;
+            }
+        }
+        #down{
+            left: 45%;
+           position: absolute;
+            width: 15%;
+            top: 70vh;
+            animation: down 2s infinite ease-out;
+        }
+        @keyframes down{
+            0%{
+                margin-top: -10px;
+            }
+            50%{
+                margin-top: 0px;
+            }
+            100%
+            {
+                margin-top: -10px;
+            }
+        }
+        #horn{
+            width: 4.5%;
+            position: absolute;
+            left: 63%;
+            top: 75vh;
+
+            
+        }
+        #line{
+            width: 2%;
+            position: absolute;
+            left: 67%;
+            top: 73.5vh;
+            transform: rotate(-25deg) ;
+            animation: line 2s infinite;
+        }
+        @keyframes line{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%
+            {
+                opacity: 0;
+            }
+        }
+        #dot_bar{
+            border: 1px solid;
+            height: 5vh;
+            width: 20%;
+            background-color: skyblue;
+            position: absolute;
+            left: 85%;
+            overflow: hidden;
+            top: 55vh;
+
+
+        }
+        #balld{
+            height:10vh;
+            width: 3%;
+            position: absolute;
+            top: 42vh;
+            left: 95%;
+
+        }
+        #ball1{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;
+            animation: ball1 2s infinite;
+        }
+        @keyframes ball1{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%
+            {
+                opacity: 0;
+            }
+        }
+
+        #ball2{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;
+            opacity:0 ;
+        }
+        #ball3{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;
+            background-color: skyblue;
+            animation: ball3 2s infinite;
+
+        }
+        @keyframes ball3{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%
+            {
+                opacity: 1;
+            }
+        }
+        #ball4{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;
+            background-color: teal;
+            animation: ball4 2s infinite;
+
+        }
+        @keyframes ball4{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%
+            {
+                opacity: 0;
+            }
+        }
+        #ball5{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;
+            background-color:tomato;
+            animation: ball5 2s infinite;
+
+        }
+        @keyframes ball5{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%
+            {
+                opacity: 1;
+            }
+        }
+        #ball6{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;background-color: yellow;
+            animation: ball6 2s infinite;
+
+        }
+        @keyframes ball6{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%
+            {
+                opacity: 1;
+            }
+        }
+        #ball7{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;
+            background-color: blue;
+            animation: ball7 2s infinite;
+
+        }
+        @keyframes ball7{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%
+            {
+                opacity: 0;
+            }
+        }
+        #ball8{
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid;
+            display: inline-block;
+            margin-top: 2px;
+            background-color: green;
+            animation: ball8 2s infinite;
+
+        }
+        @keyframes ball8{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%
+            {
+                opacity: 0;
+            }
+        }
+        #dot_line{
+            width: 100%;
+            border: 1px solid;
+            margin-top: 2vh;
+        }
+        #dbar{
+            margin-top: -1vh;
+            position: absolute;
+            animation: dbar 5s linear infinite;
+            height: 2vh;
+            width: 100%;
+            
+
+
+        }
+        @keyframes dbar{
+        0%{
+                margin-left: -110%
+
+            }
+            /* 20%{
+                margin-left: 0%;
+            }
+            40%{
+                margin-left: 0%;
+            }
+            60%{
+                margin-left: 50%;
+            }
+            80%{
+                margin-left:100%;
+            } */
+            100%{
+                margin-left: 110%;
+            }
+        }
+        #dbar1{
+            margin-top: -1vh;
+            position: absolute;
+            animation: dbar1 5s linear infinite;
+            height: 2vh;
+            width: 100%;
+            
+        
+
+
+        }
+       @keyframes dbar1{
+             
+            0%{
+                margin-left: 0%
+
+            }
+            /* 25%{
+                margin-left: 30%;
+            }
+            50%{
+                margin-left: 90%;
+            }
+            75%{
+                margin-left: 130%;
+            } */
+            100%{
+                margin-left: 220%;
+            }
+           
+            
+
+        }
+        #dbar2{
+            margin-top: -1vh;
+            position: absolute;
+            animation: dbar2 5s linear infinite;
+            height: 2vh;
+            width: 100%;
+            
+
+
+        }
+        @keyframes dbar2{
+            
+            0%{
+                margin-left: -220%
+
+            }
+            /* 25%{
+                margin-left: 30%;
+            }
+            50%{
+                margin-left: 90%;
+            }
+            75%{
+                margin-left: 130%;
+            } */
+            100%{
+                margin-left: 0%;
+            }
+           
+            
+
+        }
+        #search_bar{
+            margin-top: -31vh;
+            margin-left: 80%;
+            height: 7vh;
+            width: 15%;
+            position: absolute;
+        }
+        #compny{
+            
+            height: 20vh;
+            margin-top: 30vh;
+            margin-left: 5%;
+        }
+        #comlogo{
+            height: 10vh;
+            width: 10%;
+            margin-left: 6%;
+        }
+        #p2h{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            text-align:center ;
+            margin-top: 30vh;
+        }
+        #p2p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            text-align:center ;
+            margin-top: 5vh;
+        } #p2p1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            text-align:center ;
+            margin-top: 2vh;
+        }
+        #p2bt{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 8vh;
+            width: 15%;
+            font-size: 20px;
+            margin-left: 43%;
+            margin-top: 5vh;
+            background-color: rgb(7, 185, 156);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #p2bt:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #video{
+            margin-top: 20vh;
+            height: 90vh;
+            width: 110%;
+            margin-left: -5%;
+            box-sizing: border-box;
+        }
+        #p3b{
+            height: 80vh;
+            width: 30%;
+           
+            margin-left: 10%;
+            
+        }
+        #p3h{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            
+            margin-top: 15vh;
+            font-weight: lighter;
+        }
+        #p3p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+           line-height: 4vh;
+            margin-top: 5vh;
+            
+        }
+        #p3bt{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 8vh;
+            width: 50%;
+            font-size: 20px;
+            margin-left: 5%;
+            margin-top: 5vh;
+            background-color: rgb(7, 185, 156);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #p3bt:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #markgirl{
+            position: relative;
+           
+            
+        }
+        #mark{
+            height: 40vh;
+            width: 15%;
+            left: 53%;
+            top: -55vh;
+            position: absolute;
+        } #p3img{
+            height: 80vh;
+            width: 50%;
+            left: 45%;
+             top: -80vh;
+            position: absolute;
+        }
+        #girl{
+            height: 40vh;
+            width: 15%;
+            left: 68%;
+            top: -65vh;
+            position: absolute;
+        }
+        #p4b{
+           
+            position: relative;
+            height: 80vh;
+            width: 50%;
+            top: 20vh;
+            left: 10%;
+        }
+        #p4img{
+            height: 80vh;
+            width: 100%;
+            left: 0%;
+            position: absolute;
+        }
+        #p4b1{
+            width: 30%;
+            left: 65%;
+            top: -60vh;
+            height: 80vh;
+            display: inline-block;
+            position: relative;
+           
+        }
+        #p4h{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            
+            margin-top: 15vh;
+            font-weight: lighter;
+        }
+        #p4p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+           line-height: 4vh;
+            margin-top: 5vh;
+            
+        }
+        #p4bt{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 8vh;
+            width: 50%;
+            font-size: 20px;
+            margin-left: 5%;
+            margin-top: 5vh;
+            background-color: rgb(7, 185, 156);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #p4bt:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #p4img1{
+            height: 35vh;
+            width: 14%;
+            left: 14%;
+            top: 24vh;
+            position: absolute;
+            
+        }
+        #p4img2{
+            height: 15vh;
+            width: 20%;
+            left: 7%;
+            top: 15vh;
+            position: absolute;
+            
+        }
+        #p5b{
+            height: 80vh;
+            width: 30%;
+           
+            margin-left: 10%;
+            
+        }
+        #p5h{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            
+            margin-top: 15vh;
+            font-weight: lighter;
+        }
+        #p5p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+           line-height: 4vh;
+            margin-top: 5vh;
+            
+        }
+        #p5bt{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 8vh;
+            width: 50%;
+            font-size: 20px;
+            margin-left: 5%;
+            margin-top: 5vh;
+            background-color: rgb(7, 185, 156);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #p5bt:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #margirl{
+            position: relative;
+           
+            
+        }
+        #mar{
+            height: 50vh;
+            width: 13%;
+            left: 85%;
+            top: -65vh;
+            position: absolute;
+        } #p5img{
+            height: 80vh;
+            width: 50%;
+            left: 45%;
+             top: -80vh;
+            position: absolute;
+        }
+        #gi{
+            height: 20vh;
+            width: 10%;
+            left: 86.5%;
+            top: -20vh;
+            position: absolute;
+        }
+        #p5{
+            margin-top: -50vh;
+        }
+        #p6{
+            margin-top: 5vh;
+        }
+        #p6b1{
+           
+           position: relative;
+           height: 80vh;
+           width: 50%;
+           top: 20vh;
+           left: 10%;
+       }
+       #p6img1{
+           height: 80vh;
+           width: 100%;
+           left: 0%;
+           position: absolute;
+       }
+       #p6b2{
+           width: 30%;
+           left: 65%;
+           top: -60vh;
+           height: 80vh;
+           display: inline-block;
+           position: relative;
+          
+       }
+       #p6h1{
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 35px;
+           
+           margin-top: 15vh;
+           font-weight: lighter;
+       }
+       #p6p1{
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 17px;
+          line-height: 4vh;
+           margin-top: 5vh;
+           
+       }
+       #p6bt1{
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bold;
+           height: 8vh;
+           width: 50%;
+           font-size: 20px;
+           margin-left: 5%;
+           margin-top: 5vh;
+           background-color: rgb(7, 185, 156);
+           color: white;
+           border: none;
+           border-radius: 10px;
+       }
+       #p6bt1:hover{
+           background-color: black;
+           color: rgb(7, 185, 156);
+       }
+       #p6img2{
+           height: 40vh;
+           width: 22%;
+           left: 75%;
+           top: 14vh;
+           position: absolute;
+           
+       }
+       #p6img3{
+           height: 15vh;
+           width: 25%;
+           left: 80%;
+           top: 10vh;
+           position: absolute;
+           
+       }
+       #p7b{
+            height: 80vh;
+            width: 30%;
+           
+            margin-left: 10%;
+            
+        }
+        #p7h{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            
+            margin-top: 15vh;
+            font-weight: lighter;
+        }
+        #p7p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+           line-height: 4vh;
+            margin-top: 5vh;
+            
+        }
+        #p7bt{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 8vh;
+            width: 50%;
+            font-size: 20px;
+            margin-left: 5%;
+            margin-top: 5vh;
+            background-color: rgb(7, 185, 156);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #p7bt:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #p7{
+            margin-top: -50vh;
+        
+        }
+        #margirls{
+            position: relative;
+           
+            
+        }
+        #ma{
+            height: 70vh;
+            width: 50%;
+            left: 43%;
+            top: -85vh;
+            position: absolute;
+        } #p7img{
+            height: 80vh;
+            width: 50%;
+            left: 45%;
+             top: -90vh;
+            position: absolute;
+        }
+        #gil{
+            height: 20vh;
+            width: 10%;
+            left: 86.5%;
+            top: -20vh;
+            position: absolute;
+        }
+        #arw{
+            height: 30vh;
+            width: 20%;
+            left: 85%;
+            top: -69vh;
+            position: absolute;
+            overflow: hidden;
+
+
+        }
+        #tiiir{
+            height: 2vh;
+            margin-top: 5vh;
+            animation: tiiir 5s infinite ease-out;
+        }
+        @keyframes tiiir{
+            0%{
+            margin-left: 120%;
+            margin-top: 5vh;
+            transform: rotate(0);
+
+
+            }
+            20%{
+            margin-left: 00%;
+            margin-top: 5vh;
+            transform: rotate(0deg);
+
+
+
+
+            }
+            40%{
+                margin-left: 0%;
+            margin-top: 5vh;
+            transform: rotate(0);
+
+
+
+            }
+            60%{
+                margin-left: 0%;
+            margin-top: 5vh;
+            transform: rotate(0deg);
+
+
+
+            }
+            80%{
+                margin-left: 0;
+            margin-top: 5vh;
+            transform: rotate(0);
+
+
+
+            }
+            100%{
+                margin-left: 0;
+                margin-top: 40vh;
+            transform: rotate(30deg);
+
+            }
+        }
+        #tiir_line{
+            height: 10vh;
+            width: 5%;
+            left: 82.5%;
+            top: -73vh;
+            position: absolute;
+            animation: tiir-line 5s infinite ;
+            
+        }
+        @keyframes tiir-line{
+            0%{
+            opacity: 0;
+
+
+            }
+            20%{
+           opacity: 0;
+
+
+
+
+            }
+            40%{
+               opacity: 1;
+
+
+
+            }
+            50%{
+                opacity: 0;
+            }
+            60%{
+               opacity: 1;
+
+
+            }
+            70%{
+                opacity: 0;
+            }
+            80%{
+               opacity: 1;
+
+
+
+            }
+            100%{
+               opacity: 0;
+
+            }
+        }
+        #p8h{
+            text-align: center;
+            margin-top: 10vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+
+
+        }
+        #p8p{
+            text-align: center;
+            margin-top: 3vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            
+
+        } #p8p1{
+            text-align: center;
+            margin-top: 3vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            
+
+        }
+        #p8p2{
+            text-align: center;
+            margin-top: 3vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            
+
+        }
+        #p8bt{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            height: 8vh;
+            width: 25%;
+            font-size: 20px;
+            margin-left: 37.5%;
+            margin-top: 5vh;
+            background-color: rgb(7, 185, 156);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #p8bt:hover{
+            background-color: black;
+            color: rgb(7, 185, 156);
+        }
+        #p9{
+            height: 80vh;
+            width: 100%;
+            border: 1px solid;
+            position: relative;
+        }
+        #p9img{
+           left: 25%;
+            height: 40vh;
+            top: 10vh;
+            position: absolute;
+            z-index: 3;
+        }
+        #p9img1{
+            height: 15vh;
+            top: 50vh;
+            left: 72%;
+            position: absolute;
+            z-index: 2;
+        }
+        #p9img2{
+            height: 40vh;
+            top: 20vh;
+            position: absolute;
+            z-index: 1;
+            left: 10%;
+        }
+        #p9img3{
+            height: 50vh;
+            top: 20vh;
+            position: absolute;
+            left: 45%;
+
+        }
+        #p9img4{
+            height: 50vh;
+            top: 20vh;
+            position: absolute;
+            left: 80%;
+
+        }
+        #p9img5{
+            height: 20vh;
+            top: 20vh;
+           left: 32%;
+           position: absolute;
+
+
+        }
+        #p9img6{
+            height: 20vh;
+            top: 25vh;
+            left: 65%;
+            position: absolute;
+
+        }
+        #p9img7{
+            height: 20vh;
+            top: 33vh;
+            left: 71%;
+            position: absolute;
+
+
+        }
+        #p10{
+            height: 100vh;
+            width: 100%;
+            border: 1px solid;
+            position: relative;
+
+        }
+        #p10b{
+            height: 80%;
+            width: 90%;
+            border: 1px solid;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            animation: sliderp10 5s infinite  ;
+
+        }
+        
+        /* @keyframes sliderp10{
+            0%{
+                margin-left: 0;
+            }
+            50%{
+                margin-left: 100%;
+
+            }
+            100%{
+                margin-left: 200%;
+            }
+        } */
+        #bb1{
+            height: 80vh;
+            width: 30%;
+            box-shadow: 2px 2px 15px gray inset ;
+            float: left;
+            margin-left: 3%;
+        }
+        /* }
+        #p10b1{
+            height: 80%;
+            width: 90%;
+            border: 1px solid;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            animation: sliderp10b1 5s infinite  ;
+            
+
+        }
+        
+        @keyframes sliderp10b1{
+            0%{
+                margin-left: -100%;
+            }
+            50%{
+                margin-left: 0%;
+
+            }
+            100%{
+                margin-left: 100%;
+            }
+        }
+        #bb2{
+            height: 80vh;
+            width: 30%;
+            box-shadow: 2px 2px 15px gray inset ;
+            float: left;
+            margin-left: 3%;
+        }
+        #p10b2{
+            height: 80%;
+            width: 90%;
+            border: 1px solid;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            animation: sliderp10b2 5s infinite  ;
+
+        }
+        
+        @keyframes sliderp10b2{
+            0%{
+                margin-left: -200%;
+            }
+            50%{
+                margin-left: -100%;
+            }
+            100%{
+                margin-left: 0%;
+            }
+        }
+        #bb3{
+            height: 80vh;
+            width: 30%;
+            box-shadow: 2px 2px 15px gray inset ;
+            float: left;
+            margin-left: 3%;
+        } */
+        #may{
+            height: 15vh;
+            width: 40%;
+            margin-left: 20%;
+            margin-top: 5vh;
+        }
+        #bb1p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            text-align: center;
+            margin-top: 5vh;
+        }
+        #imc{
+            height: 15vh;
+            width: 40%;
+            margin-left: 20%;
+            margin-top: 5vh;
+
+        }
+        #anv{
+            height: 10vh;
+            width: 40%;
+            margin-left: 20%;
+            margin-top: 5vh;
+
+        }
+        #bb1p1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            text-align: center;
+            margin-top: 5vh;
+        }#bb1p2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            text-align: center;
+            margin-top: 10vh;
+
+        }
+        #bor1{
+            border-top: 1px solid grey;
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 5vh;
+        }
+       
+        
+
+
+
+       
+       
+           
+            
+       
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <img id="logo" src="../neo/img/logo.svg"/>
+        <ul id="nav_bar">
+               
+                <li id="li" class="drop"><a href="">Solutions</a>
+                     <img id="unline" src="../neo/img/underline@2x.png" alt=""/>
+                     <div class="drop-menu"></div>
+                
+                
+                </li>
+            <li id="li"><a href="">Services</a><img id="unline1" src="../neo/img/underline@2x.png" alt=""/></li>
+            <li id="li"><a href="">Case Studies</a><img id="unline2" src="../neo/img/underline@2x.png" alt=""/></li>
+            <li id="li"><a href="">Pricing</a><img id="unline3" src="../neo/img/underline@2x.png" alt=""/></li>
+            <li id="li"><a href="">Resources</a><img id="unline4" src="../neo/img/underline@2x.png" alt=""/></li>
+          
+            
+          
+          
+
+
+
+        </ul>
+        <div id="login">
+            <li id="loginli"><a href="">login</a></li>
+            <button id="navbtn">Get Started</button>
+        </div>
+       			
+        
+    </div>
+    <div id="p1">
+        <div id="p1b">
+            <h1 id="p1h">Run World Class Influencer Marketing Campaigns.</h1>
+            <p id="p1p">NeoReach creates world class original
+                influencer campaigns for leading brands
+                and Global Fortune 500s</p>
+        </div>
+        <button id="p1btn">LEARN MORE</button>
+        <div id="slider">
+            <img id="s1" src="./img/card-boy@2x.png"/>
+            <img id="s2" src="./img/card-girl@2x.png"/>
+            <img id="s3" src="./img/card-boy@2x.png"/>
+            <img id="s4" src="./img/card-girl@2x.png"/>
+            <img id="s5" src="./img/card-boy@2x.png"/>
+            <img id="s6" src="./img/card-girl@2x.png"/>
+            <img id="s7" src="./img/card-boy@2x.png"/>
+            <img id="s8" src="./img/card-girl@2x.png"/>
+            <img id="s9" src="./img/card-girl@2x.png"/>
+
+           
+            
+        </div>
+       
+
+    </div>
+    <img id="p1img" src="../neo/img/hero-base1@2x.png"/>
+    <img id="p1img1" src="../neo/img/hero-base2@2x (1).png"/>
+    <div id="wave">
+    <img id="p1img2" src="../neo/img/graph-wave@2x.png"/>
+    <img id="p1img3" src="../neo/img/graph-wave@2x.png"/>
+    <img id="p1img4" src="../neo/img/graph-wave@2x.png"/>
+   
+
+</div>
+<div id="dot"></div>
+
+<div id="graph">
+    <img id="p1img5" src="../neo/img/graph-up.svg"/>
+
+    
+
+</div>
+<div>
+<img id="up" src="../neo/img/talk-bubble@2x.png"/>
+<img id="down" src="../neo/img/talk-bubble@2x.png"/>
+<img id="horn" src="../neo/img/bullhorn@2x.png"/>
+<img id="line" src="../neo/img/horn-lines.svg"/>
+</div>
+
+<div id="dot_bar">
+    <div id="dot_line"></div>
+    <img id="dbar" src="../neo/img/search-dots (1).svg"/>
+    <img id="dbar1" src="../neo/img/search-dots (1).svg"/>
+    <img id="dbar2" src="../neo/img/search-dots (1).svg"/>
+
+</div>
+<div id="balld">
+    <div id="ball1"></div>
+    <div id="ball2"></div>
+    <div id="ball3"></div>
+    <div id="ball4"></div>
+    <div id="ball5"></div>
+    <div id="ball6"></div>
+    <div id="ball7"></div>
+    <div id="ball8"></div>
+
+
+
+</div>
+<img id="search_bar" src="../neo/img/search-bar@2x.png"/>
+<div id="compny">
+    <img id="comlogo" src="../neo/img/logo-airbnb@2x.png"/>
+    <img id="comlogo" src="../neo/img/logo-amazon@2x.png"/>
+    <img id="comlogo" src="../neo/img/logo-nyt@2x.png"/>
+    <img id="comlogo" src="../neo/img/logo-honda@2x.png"/>
+    <img id="comlogo" src="../neo/img/logo-walmart@2x.png"/>
+    <img id="comlogo" src="../neo/img/logo-bet@2x.png"/>
+
+</div>
+<div id="p2">
+    <h1 id="p2h" data-aos="fade-down">Leading Global Influencer Agency</h1>
+    <p id="p2p" data-aos="fade-down">Our team integrates with yours to ensure proactive, real-time communication, while creating</p>
+    <p id="p2p1" data-aos="fade-down">authentic, data-driven campaigns that get to the heart and soul of your brand story.</p>
+    <button id="p2bt" data-aos="fade-down">Learn More</button>
+    <img id="video" src="../neo/img/services-hero-base@2x.png"/>
+
+</div>
+<div id="p3" data-aos="fade-down-left">
+    <div id="p3b">
+        <h1 id="p3h">Connected Network
+            Of Influencers</h1>
+        <p id="p3p">Years of executing campaigns have helped us shape strong direct relationships with influencers, bloggers, and other creators. Coupled with our data-backed insights into key demographics and KPI’s, we not only ensure the perfect fit - but the perfect relationship.
+
+            </p>
+            <button  id="p3bt">LEARN MORE</button>
+    </div>
+    <div id="markgirl">
+    <img id="p3img" src="../neo/img/work-illus1@2x (1).png"/>
+    <img id="mark" src="../neo/img/work1-photo1@2x.png"/>
+    <img id="girl" src="../neo/img/work1-photo2@2x.png"/>
+
+    </div>
+</div>
+<div id="p4">
+    <div id="p4b">
+    <img id="p4img" src="../neo/img/work-illus2@2x.png" alt=""/>
+    <img id="p4img1" src="../neo/img/work2-photo1@2x.png"/>
+    <img id="p4img2" src="../neo/img/work2-bubble@2x.png"/>
+
+    </div>
+    <div id="p4b1">
+        <h1 id="p4h">Connected Network
+            Of Influencers</h1>
+        <p id="p4p">Years of executing campaigns have helped us shape strong direct relationships with influencers, bloggers, and other creators. Coupled with our data-backed insights into key demographics and KPI’s, we not only ensure the perfect fit - but the perfect relationship.
+
+            </p>
+            <button id="p4bt">LEARN MORE</button>
+    </div>
+</div>
+<div id="p5">
+    <div id="p5b">
+        <h1 id="p5h">Contracting & Activation
+            </h1>
+        <p id="p5p">Talent acquisition and management are key to a successful campaign. We manage the entire contracting and negotiating process - including pricing strategy, legal contracts, compliance, and everything in between. From campaign deliverables to final payment, we’ve got it covered.
+
+            </p>
+            <button id="p5bt">LEARN MORE</button>
+    </div>
+    <div id="margirl">
+    <img id="p5img" src="../neo/img/work-illus3@2x.png"/>
+    <img id="mar" src="../neo/img/work3-photo1@2x.png"/>
+    <img id="gi" src="../neo/img/work3-shape.svg"/>
+
+
+    </div>
+    <div id="p6">
+        <div id="p6b1">
+        <img id="p6img1" src="../neo/img/work-illus4@2x.png" alt=""/>
+        <img id="p6img2" data-aos="fade-up"
+        data-aos-anchor-placement="bottom-center" src="../neo/img/work4-photo1@2x.png"/>
+        <img id="p6img3" src="../neo/img/work4-mag.svg"/>
+    
+        </div>
+        <div id="p6b2">
+            <h1 id="p6h1">Paid Media</h1>
+            <p id="p6p1">Syndicate influencer content with an experienced approach to user acquisition and paid media. Our team will define ad auctions, budget allocations, offers, copy, creative and more, all on the basis of ROI-across all major ad auctions and channels including Facebook®, Instagram®, Google®, TikTok®, Snapchat® and more.
+    
+                </p>
+                <button id="p6bt1">LEARN MORE</button>
+        </div>
+    </div>
+    <div id="p7">
+        <div id="p7b">
+            <h1 id="p7h">Self-Service
+                Software & APIs
+                </h1>
+            <p id="p7p">Our best-in-class self-service software and APIs allow for seamless Influencer campaign search, management, and tracking backed by analytics. Access a dedicated dashboard or integrate over 400+ custom data points into in-house tools and technologies.
+    
+                </p>
+                <button id="p7bt">LEARN MORE</button>
+        </div>
+        <div id="margirls">
+            <img id="p7img" src="../neo/img/pricing-brands-bot@2x.png"/>
+            <img id="ma" src="../neo/img/pricing-brands-top@2x.png"/>
+            <img id="tiir_line" src="../neo/img/pricing-brands-lines.svg"/>
+            <div id="arw">
+                <img id="tiiir" src="../neo/img/pricing-brands-arrow.svg"/>
+
+            </div>
+            </div>
+    </div>
+    <div id="p8">
+        <h1 id="p8h">Everything your team needs in one package.</h1>
+        <p id="p8p">Whether you are looking for a YouTube superstar or an Instagram micro-influencer,</p>
+        <p id="p8p1">you’re in good company. Sign up today and see why NeoReach has managed over</p>
+        <p id="p8p2">$250 million worth of influencer marketing campaigns to date.</p>
+        <button id="p8bt">GET STARTED TODAY!</button>
+
+    </div>
+    <div id="p9">
+        <img id="p9img" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-boxes@2x.png" alt="">
+        <img id="p9img1" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-paper@2x.png" alt="">
+        <img id="p9img2" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-photo1@2x.png" alt="">
+        <img id="p9img3" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-photo2@2x.png" alt="">
+        <img id="p9img4" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-photo3@2x.png" alt="">
+        <img id="p9img5" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-sm-photo1@2x.png" alt="">
+        <img id="p9img6" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-sm-photo2@2x.png" alt="">
+        <img id="p9img7" data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="../neo/img/package-sm-photo3@2x.png" alt=""/>
+      
+
+
+    </div>
+    <div id="p10">
+        
+        <div id="p10b">1
+            <div id="bb1">
+                <img id="may" src="../neo/img/Macys-Logo-black-e1619447007844.png"/>
+                <p id="bb1p" >NeoReach launched Market by Macy’s, a new location and store chain with influencer marketing.</p>
+                <div id="bor1"></div>
+                <div id="bor2"></div>
+                <div id="bor3"></div>
+
+            </div>
+            <div id="bb1">
+                <img id="imc" src="../neo/img/IMC-toys-logo-influencer-marketing-campaign-e1619711722841.jpeg"/>
+                <p id="bb1p1" >NeoReach launched Market by Macy’s, a new location and store chain with influencer marketing.</p>
+
+
+            </div>
+            <div id="bb1">
+                <img id="anv" src="../neo/img/nvidia-black-e1625687232142.png"/>
+                <p id="bb1p2" >NeoReach launched Market by Macy’s, a new location and store chain with influencer marketing.</p>
+
+            </div>
+
+            
+        </div>
+        <div id="p10b1">2
+            <div id="bb2"></div>
+            <div id="bb2"></div>
+            <div id="bb2"></div>
+
+        </div>
+        <div id="p10b2">3
+            <div id="bb3"></div>
+            <div id="bb3"></div>
+            <div id="bb3"></div>
+
+        
+        
+    </div>
+
+    </div>
+   
+
+
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+</html>
